@@ -7,7 +7,7 @@ import Chat from "./component/chat/chat";
 const App = () => {
   return (
     <Router>
-      <Route path="/" exact component={Join} />
+      <Route path="/drawAndTalk" exact component={Join} />
       <Route path="/chat" component={Chat} />
     </Router>
   );
