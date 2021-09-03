@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/drawAndTalk/static/css/main.fc1263b2.chunk.css",
+    "main.js": "/drawAndTalk/static/js/main.3369da5c.chunk.js",
+    "main.js.map": "/drawAndTalk/static/js/main.3369da5c.chunk.js.map",
+    "runtime-main.js": "/drawAndTalk/static/js/runtime-main.3413f8b2.js",
+    "runtime-main.js.map": "/drawAndTalk/static/js/runtime-main.3413f8b2.js.map",
+    "static/js/2.9763ccab.chunk.js": "/drawAndTalk/static/js/2.9763ccab.chunk.js",
+    "static/js/2.9763ccab.chunk.js.map": "/drawAndTalk/static/js/2.9763ccab.chunk.js.map",
+    "static/js/3.fb73b2ed.chunk.js": "/drawAndTalk/static/js/3.fb73b2ed.chunk.js",
+    "static/js/3.fb73b2ed.chunk.js.map": "/drawAndTalk/static/js/3.fb73b2ed.chunk.js.map",
+    "index.html": "/drawAndTalk/index.html",
+    "static/css/main.fc1263b2.chunk.css.map": "/drawAndTalk/static/css/main.fc1263b2.chunk.css.map",
+    "static/js/2.9763ccab.chunk.js.LICENSE.txt": "/drawAndTalk/static/js/2.9763ccab.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3413f8b2.js",
+    "static/js/2.9763ccab.chunk.js",
+    "static/css/main.fc1263b2.chunk.css",
+    "static/js/main.3369da5c.chunk.js"
+  ]
+}
