@@ -9,6 +9,8 @@ import Input from "../Input/Input";
 
 import "./chat.css";
 
+import { Redirect } from "react-router-dom";
+
 let socket;
 
 const Chat = ({ location }) => {
@@ -17,7 +19,9 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState("");
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const [allow, setAllow] = useState(true);
   const ENDPOINT = "https://draw-and-talk.herokuapp.com/";
+  // const ENDPOINT = "http://localhost:5000/";
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -29,6 +33,7 @@ const Chat = ({ location }) => {
     socket.emit("join", { name, room }, (error) => {
       if (error) {
         alert(error);
+        setAllow(false);
       }
     });
   }, [ENDPOINT, location.search]);
@@ -58,25 +63,27 @@ const Chat = ({ location }) => {
       //  console.log(base64Image);
     }
   };
+  if (!allow) {
+    return <Redirect to="/drawAndTalk"></Redirect>;
+  } else {
+    return (
+      <div className="mainScreenContainer">
+        <div className="chatcontainer">
+          <InfoBar room={room} />
+          <Messages messages={messages} name={name} />
+          <Input
+            message={message}
+            setMessage={setMessage}
+            sendMessage={sendMessage}
+          />
+        </div>
 
-  return (
-    // <Container />
-    <div className="mainScreenContainer">
-      <div className="chatcontainer">
-        <InfoBar room={room} />
-        <Messages messages={messages} name={name} />
-        <Input
-          message={message}
-          setMessage={setMessage}
-          sendMessage={sendMessage}
-        />
+        <div className="canavsContainer">
+          <Container />
+        </div>
       </div>
-
-      <div className="canavsContainer">
-        <Container />
-      </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default Chat;
