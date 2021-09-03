@@ -8,7 +8,7 @@ const Image = ({ message: { text, user }, name }) => {
   let isSentByCurrentUser = false;
 
   const trimmedName = name.trim().toLowerCase();
-  console.log("image text : ", text);
+  //  console.log("image text : ", text);
   if (user === trimmedName) {
     isSentByCurrentUser = true;
   }

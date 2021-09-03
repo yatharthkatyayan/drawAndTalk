@@ -55,7 +55,7 @@ const Chat = ({ location }) => {
       let canvasImage = document.getElementById("board");
       let base64Image = canvasImage.toDataURL("image/jpeg");
       socket.emit("sendImage", base64Image, () => setMessage(""));
-      console.log(base64Image);
+      //  console.log(base64Image);
     }
   };
 
